@@ -1,0 +1,132 @@
+#include<stdio.h>
+#include<locale.h>
+#define ROW 9
+#define COL 9
+void main()
+{
+setlocale(LC_ALL, "RUS");
+int row, col;
+printf("\n");
+for (row = 1;row <= ROW;++row)
+{
+for (col = 1;col <= COL;col++)
+printf("%5d", col * row);
+printf("\n");
+}
+system("pause");
+}
+правый верхний треугольник
+#include<stdio.h>
+#include<locale.h>
+#define ROW 9
+#define COL 9
+void main()
+{
+setlocale(LC_ALL, "RUS");
+int row, col;
+printf("\n");
+for (row = 1;row <= ROW;++row)
+{
+for (col = 1;col <= COL;col++)
+{
+if (col < row)
+printf(" ");
+else
+printf("%6d", col * row);
+}
+printf("\n");
+}
+system("pause");
+}
+левый нижний треугольник
+#include<stdio.h>
+#include<locale.h>
+#define ROW 9
+#define COL 9
+void main()
+{
+setlocale(LC_ALL, "RUS");
+int row, col;
+printf("\n");
+for (row = 1;row <= ROW;++row)
+{
+for (col = 1;col <= COL;col++)
+{
+if (col < row)
+printf(" ");
+else
+printf("%5d", col * row);
+}
+printf("\n");
+}
+system("pause");
+}
+#include<stdio.h>
+#include<locale.h>
+#define ROW 9
+#define COL 9
+void main()
+{
+setlocale(LC_ALL, "RUS");
+int row, col;
+printf("\n");
+for (row = 1;row <= ROW;++row)
+{
+for (col = 1;col <= COL;col++)
+printf("%2d + %2d = %5d ", col, row, col + row);
+printf("\n");
+}
+system("pause");
+}
+#include<stdio.h>
+#include<locale.h>
+void main()
+{
+setlocale(LC_ALL, "RUS");
+char a;
+while (1)
+{
+
+int x, y = 0;
+puts("Введите шестизначное число:");
+scanf("%d", &x);
+while (x > 0)
+{
+if (x % 2 == 0)
+y += 1;
+x = x / 10;
+}
+printf("Четных числе: %d\n", y);
+puts("Продолжить?(Да - y, нет - n)");
+if ((a = getchar()) == 'n')break;
+
+}
+}
+#include<stdio.h>
+#include<locale.h>
+void main()
+{
+setlocale(LC_ALL, "RUS");
+char c, m;
+int a, b, p, n, ;
+puts("Введите ширину, длину и символ (через пробел) прямоугольника:");
+scanf("%d %d %c",&a, &b, &c);
+m = ' ';
+for (p = 1; p <= a;p++)
+{
+printf("%c ", c);
+}
+for (n=1; n<=b;n++)
+{
+printf("%c\n", c);
+
+}
+
+
+for (n = 1; n == b;n++)
+{
+printf("%c\n", c);
+
+
+}
+}
