@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	char a;
+	int i, j, f, r, d;
+	setlocale(LC_ALL, "RUS");
+	while (1)
+	{
+		puts("Введите символ:");
+		scanf_s("%c", &a);
+		puts("Введите радиус вписанной окружности:");
+		scanf_s("%d", &r);
+		f = 2 * r;
+
+		for (i = 0; i < f; i++)
+		{
+			for (j = f; j > i; j--)
+				printf("  ");
+			for (j = 0; j < i; j++)
+				printf(" %c", a);
+			//for (j = 0; j < i; j++)
+				//printf(" %c", a);
+			printf("\n");
+		}
+		/*for (i = 0; i < f; i++)
+		{
+			for (j = 0; j < i; j++)
+				printf("  ");
+			for (j = f; j > i; j--)
+				printf(" %c", a);
+			for (j = f; j > i; j--)
+				printf(" %c", a);
+			printf("\n");
+
+		}*/
+		printf("Продолжить ? (Да - y, нет - n)\n");
+		if ((a = getchar()) == 'n') break;
+	}
+
+}
